@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+  
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.min.js"></script>
+<script type="text/javascript" src="js/Chart.min.js"></script>
+<script type="text/javascript" src="js/moment.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+  
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+                <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+                <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+    
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+              <th>Number</th>
+            <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>AutoTraders.com Smoke Test</td>
+              <td>1</td>
+            <td>27 Mar 2020, 18:32</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+      </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+          <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+      </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Duration</th>
+            <th>Average</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+                      <tr>
+              <td class="location">AutotradersSteps.choose_make_as(String)</td>
+              <td>5</td>
+              <td class="duration" data-value="6342992197">6s 342ms</td>
+              <td class="duration" data-value="1268598439">1s 268ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.display_in_console_the_number_of_cars_listed_in_result_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="33449517">033ms</td>
+              <td class="duration" data-value="33449517">033ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_click_Advance_Search_link_on_the_home_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="5278970872">5s 278ms</td>
+              <td class="duration" data-value="5278970872">5s 278ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_clicks_button()</td>
+              <td>1</td>
+              <td class="duration" data-value="6149648878">6s 149ms</td>
+              <td class="duration" data-value="6149648878">6s 149ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_enter_in_the_text_box(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="435747664">435ms</td>
+              <td class="duration" data-value="435747664">435ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_is_in_landing_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="21180373">021ms</td>
+              <td class="duration" data-value="21180373">021ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_select_car_from_Make_Model_and_Trim_section(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2237305013">2s 237ms</td>
+              <td class="duration" data-value="2237305013">2s 237ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_select_check_box_under(String,String)</td>
+              <td>2</td>
+              <td class="duration" data-value="16626634324">16s 626ms</td>
+              <td class="duration" data-value="8313317162">8s 313ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_update_Year_to(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2319828305">2s 319ms</td>
+              <td class="duration" data-value="2319828305">2s 319ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_verifies_that_he_is_in_result_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="2471381610">2s 471ms</td>
+              <td class="duration" data-value="2471381610">2s 471ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.user_verifies_that_he_sees_only_cars_in_listing(String)</td>
+              <td>1</td>
+              <td class="duration" data-value="3043013725">3s 043ms</td>
+              <td class="duration" data-value="3043013725">3s 043ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.verify_that_and_is_visible(String,String)</td>
+              <td>1</td>
+              <td class="duration" data-value="112534010">112ms</td>
+              <td class="duration" data-value="112534010">112ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.verify_that_are_present(String)</td>
+              <td>3</td>
+              <td class="duration" data-value="123526647">123ms</td>
+              <td class="duration" data-value="41175549">041ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">AutotradersSteps.verify_that_search_button_is_present()</td>
+              <td>1</td>
+              <td class="duration" data-value="15549965">015ms</td>
+              <td class="duration" data-value="15549965">015ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.setup()</td>
+              <td>7</td>
+              <td class="duration" data-value="29583053831">29s 583ms</td>
+              <td class="duration" data-value="4226150547">4s 226ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                      <tr>
+              <td class="location">Hook.teardown(Scenario)</td>
+              <td>7</td>
+              <td class="duration" data-value="798695792">798ms</td>
+              <td class="duration" data-value="114099398">114ms</td>
+              <td class="passed">100.00%</td>
+            </tr>
+                  </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>16</td>
+            <td>35</td>
+            <td class="duration">1m 15s 593ms</td>
+            <td class="duration">2s 159ms</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
